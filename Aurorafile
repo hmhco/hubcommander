@@ -55,7 +55,7 @@ for profile in [PRODUCTION]:
         processes=[
             Process(
                 name="start server",
-                cmdline="""pwd && /bin/bash -c ./launch_in_docker.sh """
+                cmdline="""cd / && /bin/bash -c ./launch_in_docker.sh """
             ).bind(profile=profile)
         ],
         resources=task_res
