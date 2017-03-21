@@ -31,7 +31,7 @@ RUN \
 
   # The launcher script:
   mv /rtmbot/hubcommander/launch_in_docker.sh / && chmod +x /launch_in_docker.sh && \
-  rm /rtmbot/hubcommander/python-rtmbot-${RTM_VERSION}.tar.gz
+  rm /rtmbot/hubcommander/python-rtmbot-0.4.0.tar.gz
 
 # DEFINE YOUR ENV VARS FOR SECRETS HERE:
 ENV SLACK_TOKEN="REPLACEMEINCMDLINE" \
