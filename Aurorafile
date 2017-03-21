@@ -2,7 +2,7 @@
 CLUSTER_NAME= "brnpb"                          # ie. brnpb
 APP_NAME = "hubcommander"                                 # ie. idm-idp
 APP_ROLE = "hmheng-infra"                                 # ie. hmheng-idm
-DOCKER_GROUP = "com-hmhco-infra"                         # ie. com-hmhco-idm or io-hmheng-demo
+DOCKER_GROUP = "hmheng-infra"                         # ie. com-hmhco-idm or io-hmheng-demo
 DOCKER_REGISTRY = "docker.br.hmheng.io"                 # ie. docker.br.hmheng.io
 AWS_REGION = "us-east-1"                                # ie. us-east-1
 
