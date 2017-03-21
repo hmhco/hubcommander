@@ -49,16 +49,13 @@ PRODUCTION = Profile(
 jobs = []
 task_res = Resources(cpu=0.5, ram=1 * GB, disk=512 * MB)
 
-for profile in [DEV, INT, CERT, CERTRV, PRODRV, PRODUCTION]:
+for profile in [PRODUCTION]:
     server_task = Task(
         name="run server",
         processes=[
             Process(
                 name="start server",
-                cmdline="""/opt/spark/bin/spark-submit """
-
-
-
+                cmdline="""/bin/bash -c ./launch_in_docker.sh """
             ).bind(profile=profile)
         ],
         resources=task_res
@@ -82,4 +79,3 @@ for profile in [DEV, INT, CERT, CERTRV, PRODRV, PRODUCTION]:
             ).bind(profile=profile)
         )
     ).bind(profile=profile))
-0
