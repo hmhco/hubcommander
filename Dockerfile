@@ -7,6 +7,12 @@ MAINTAINER NetflixOSS <netflixoss@netflix.com>
 ARG RTM_VERSION
 ADD python-rtmbot-0.4.0.tar.gz /
 
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    python2.7 \
+    libcurl4-nss-dev \
+    libsvn-dev && \
+    unset DEBIAN_FRONTEND
+    
 RUN \
   # Install Python:
   apt-get update && \
