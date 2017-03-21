@@ -5,7 +5,7 @@ MAINTAINER NetflixOSS <netflixoss@netflix.com>
 
 # Install the Python RTM bot itself:
 ARG RTM_VERSION
-ADD python-rtmbot-${RTM_VERSION}.tar.gz /
+ADD python-rtmbot-0.4.0.tar.gz /
 
 RUN \
   # Install Python:
@@ -14,12 +14,12 @@ RUN \
   apt-get install python3 python3-venv nano -y
 
 # Add all the other stuff to the plugins:
-COPY / /python-rtmbot-${RTM_VERSION}/hubcommander
+COPY / /python-rtmbot-0.4.0/hubcommander
 
 # Install all the things:
 RUN \
   # Rename the rtmbot:
-  mv /python-rtmbot-${RTM_VERSION} /rtmbot && \
+  mv /python-rtmbot-0.4.0 /rtmbot && \
 
   # Set up the VENV:
   pyvenv /venv && \
